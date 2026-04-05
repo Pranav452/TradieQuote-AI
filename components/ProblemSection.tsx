@@ -16,12 +16,12 @@ const painPoints = [
 
 export function ProblemSection() {
   return (
-    <section className="bg-[#0b140b] px-6 py-8 text-white md:px-12">
-      <div className="mx-auto max-w-7xl">
+    <section className="overflow-x-hidden bg-[#0b140b] px-6 py-8 text-white md:px-12">
+      <div className="mx-auto max-w-7xl min-w-0">
         <div className="grid grid-cols-1 items-start gap-16 lg:grid-cols-2">
-          <div className="space-y-12">
+          <div className="min-w-0 space-y-12">
             <div>
-              <h2 className="mb-8 font-serif text-5xl leading-[1.1] text-balance text-white italic md:text-7xl">
+              <h2 className="mb-8 font-serif text-4xl leading-[1.1] text-balance text-white italic sm:text-5xl md:text-6xl lg:text-7xl">
                 Still Wasting Hours <br />
                 Quoting Jobs That Go <br />
                 Nowhere?
@@ -113,15 +113,16 @@ export function ProblemSection() {
             </div>
           </div>
 
-          <div className="relative lg:sticky lg:top-24">
+          <div className="relative min-w-0 lg:sticky lg:top-24">
             <div className="relative aspect-[4/5] overflow-hidden rounded-[60px] border border-white/10 shadow-inner">
-              <img src="/Exhausted Tradesman in Van.png" alt="Exhausted tradesman in van" className="w-full h-full object-cover" />
-                src="https://images.unsplash.com/photo-1621905251918-48416bd8575a?q=80&w=2069&auto=format&fit=crop"
-                alt="Worker on phone"
+              <Image
+                src="/Exhausted Tradesman in Van.png"
+                alt="Exhausted tradesman in van"
                 fill
                 sizes="(max-width: 1024px) 100vw, 50vw"
                 className="object-cover"
-              
+                priority
+              />
             </div>
           </div>
         </div>

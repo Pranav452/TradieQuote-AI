@@ -42,12 +42,12 @@ const comparison: {
 
 export function ROISection() {
   return (
-    <section className="bg-[#0b140b] px-6 py-8 text-white md:px-12">
-      <div className="mx-auto max-w-7xl">
+    <section className="overflow-x-hidden bg-[#0b140b] px-6 py-8 text-white md:px-12">
+      <div className="mx-auto max-w-7xl min-w-0">
         <div className="grid grid-cols-1 items-start gap-16 lg:grid-cols-2">
-          <div className="space-y-8">
+          <div className="min-w-0 space-y-8">
             <div>
-              <h2 className="mb-6 text-5xl leading-tight font-bold text-balance md:text-7xl">
+              <h2 className="mb-6 text-4xl leading-tight font-bold text-balance sm:text-5xl md:text-6xl lg:text-7xl">
                 One Extra Job <br />
                 <span className="text-orange-400">Pays For This</span>
               </h2>
@@ -99,7 +99,7 @@ export function ROISection() {
                   <span className="mb-1 block text-xs text-zinc-500">
                     Monthly Leakage
                   </span>
-                  <div className="text-3xl font-bold tracking-tight text-red-500 tabular-nums">
+                  <div className="text-xl font-bold tracking-tight text-balance text-red-500 tabular-nums sm:text-2xl md:text-3xl">
                     24 × $80 = $1,920/mo lost
                   </div>
                 </div>
@@ -122,16 +122,38 @@ export function ROISection() {
             </div>
           </div>
 
-          <div className="space-y-6">
-            <div className="overflow-hidden rounded-[40px] border border-white/5 bg-zinc-900/30">
-              <div className="grid grid-cols-3 border-b border-white/5 bg-zinc-900/50 p-6 md:p-8">
-                <span className="text-xs font-bold tracking-widest text-zinc-500 uppercase">
+          <div className="min-w-0 space-y-6">
+            <div className="space-y-3 md:hidden">
+              {comparison.map(({ Icon, label, bad, good }) => (
+                <div
+                  key={label}
+                  className="rounded-2xl border border-white/5 bg-zinc-900/30 p-4"
+                >
+                  <div className="mb-3 flex items-center gap-2">
+                    <Icon className="size-4 shrink-0 text-zinc-500" aria-hidden />
+                    <span className="text-sm font-medium text-zinc-200">{label}</span>
+                  </div>
+                  <p className="mb-2 text-xs leading-relaxed text-pretty text-zinc-500">
+                    <span className="font-semibold text-zinc-600">Without: </span>
+                    {bad}
+                  </p>
+                  <div className="flex items-center gap-2">
+                    <span className="text-sm font-bold text-orange-400">With: {good}</span>
+                    <CheckCircle2 className="size-4 shrink-0 text-orange-400" aria-hidden />
+                  </div>
+                </div>
+              ))}
+            </div>
+
+            <div className="hidden overflow-hidden rounded-[40px] border border-white/5 bg-zinc-900/30 md:block">
+              <div className="grid min-w-0 grid-cols-3 border-b border-white/5 bg-zinc-900/50 p-6 md:p-8">
+                <span className="min-w-0 text-[10px] font-bold tracking-widest text-zinc-500 uppercase lg:text-xs">
                   The Workflow
                 </span>
-                <span className="text-xs font-bold tracking-widest text-zinc-600 uppercase">
+                <span className="min-w-0 text-[10px] font-bold tracking-widest text-zinc-600 uppercase lg:text-xs">
                   Without Tool
                 </span>
-                <span className="text-right text-xs font-bold tracking-widest text-orange-400 uppercase">
+                <span className="min-w-0 text-right text-[10px] font-bold tracking-widest text-orange-400 uppercase lg:text-xs">
                   With TradieQuote AI
                 </span>
               </div>
@@ -139,19 +161,19 @@ export function ROISection() {
                 {comparison.map(({ Icon, label, bad, good }) => (
                   <div
                     key={label}
-                    className="grid grid-cols-3 items-center gap-2 border-b border-white/5 py-4 last:border-0 md:gap-4"
+                    className="grid min-w-0 grid-cols-3 items-center gap-2 border-b border-white/5 py-4 last:border-0 md:gap-4"
                   >
                     <div className="flex min-w-0 items-center gap-2 md:gap-3">
                       <Icon className="size-4 shrink-0 text-zinc-500" aria-hidden />
-                      <span className="text-xs font-medium text-zinc-300 md:text-sm">
+                      <span className="text-xs font-medium text-pretty text-zinc-300 md:text-sm">
                         {label}
                       </span>
                     </div>
-                    <span className="text-[10px] leading-snug text-zinc-600 md:text-xs">
+                    <span className="min-w-0 text-[10px] leading-snug text-pretty text-zinc-600 md:text-xs">
                       {bad}
                     </span>
-                    <div className="flex items-center justify-end gap-1.5 text-right md:gap-2">
-                      <span className="text-xs font-bold text-orange-400 md:text-sm">
+                    <div className="flex min-w-0 items-center justify-end gap-1.5 text-right md:gap-2">
+                      <span className="text-xs font-bold text-pretty text-orange-400 md:text-sm">
                         {good}
                       </span>
                       <CheckCircle2
@@ -164,9 +186,9 @@ export function ROISection() {
               </div>
             </div>
 
-            <div className="relative overflow-hidden rounded-[40px] bg-zinc-100 p-12 text-center">
+            <div className="relative overflow-hidden rounded-[40px] bg-zinc-100 p-8 text-center sm:p-12">
               <div className="relative z-10">
-                <h3 className="mb-4 text-3xl font-bold text-balance text-zinc-900 md:text-4xl">
+                <h3 className="mb-4 text-2xl font-bold text-balance text-zinc-900 sm:text-3xl md:text-4xl">
                   Stop losing $1,000+ a month chasing bad leads
                 </h3>
                 <p className="mx-auto mb-10 max-w-sm text-pretty text-zinc-500">

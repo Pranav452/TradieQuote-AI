@@ -4,8 +4,8 @@ import { SectionHeader } from "@/components/ui/SectionHeader";
 
 export function FeaturesGrid() {
   return (
-    <section className="bg-white px-6 py-8 md:px-12">
-      <div className="mx-auto max-w-7xl">
+    <section className="overflow-x-hidden bg-white px-6 py-8 md:px-12">
+      <div className="mx-auto max-w-7xl min-w-0">
         <SectionHeader
           badge="Seamless Ecosystem"
           title="Works On Any Website"
@@ -13,7 +13,7 @@ export function FeaturesGrid() {
         />
 
         <div className="grid grid-cols-1 gap-6 lg:grid-cols-12">
-          <div className="flex min-h-[500px] flex-col justify-between rounded-[40px] border border-zinc-100 bg-zinc-50/50 p-8 md:p-12 lg:col-span-7">
+          <div className="flex min-h-[500px] min-w-0 flex-col justify-between rounded-[40px] border border-zinc-100 bg-zinc-50/50 p-6 sm:p-8 md:p-12 lg:col-span-7">
             <div>
               <div className="mb-8 flex items-center gap-3">
                 <div className="rounded-lg bg-zinc-900 p-2">
@@ -35,24 +35,24 @@ export function FeaturesGrid() {
               </p>
             </div>
 
-            <div className="overflow-hidden rounded-2xl border border-zinc-200 bg-zinc-100/50 p-6 font-mono text-xs md:text-sm">
+            <div className="min-w-0 overflow-x-auto overflow-y-hidden rounded-2xl border border-zinc-200 bg-zinc-100/50 p-4 font-mono text-[10px] sm:p-6 sm:text-xs md:text-sm">
               <div className="mb-4 flex gap-1.5">
                 <div className="size-2.5 rounded-full bg-zinc-300" />
                 <div className="size-2.5 rounded-full bg-zinc-300" />
                 <div className="size-2.5 rounded-full bg-zinc-300" />
               </div>
-              <div className="space-y-2">
-                <div className="flex gap-4">
-                  <span className="w-4 text-zinc-400">1</span>
-                  <code className="text-zinc-400">
+              <div className="min-w-0 space-y-2">
+                <div className="flex gap-3 sm:gap-4">
+                  <span className="w-4 shrink-0 text-zinc-400">1</span>
+                  <code className="min-w-0 break-all text-zinc-400 sm:break-normal">
                     <span className="text-orange-400">&lt;script</span>{" "}
                     src=&quot;https://cdn.tradiequote.ai/widget.js&quot;
                     <span className="text-orange-400">&gt;&lt;/script&gt;</span>
                   </code>
                 </div>
-                <div className="flex gap-4">
-                  <span className="w-4 text-zinc-400">2</span>
-                  <code className="text-zinc-400">
+                <div className="flex gap-3 sm:gap-4">
+                  <span className="w-4 shrink-0 text-zinc-400">2</span>
+                  <code className="min-w-0 break-all text-zinc-400 sm:break-normal">
                     <span className="text-orange-400">&lt;tradie-quote-ai</span>{" "}
                     api-key=&quot;tq_live_8k...&quot;
                     <span className="text-orange-400">&gt;&lt;/tradie-quote-ai&gt;</span>
@@ -62,7 +62,7 @@ export function FeaturesGrid() {
             </div>
           </div>
 
-          <div className="flex flex-col gap-6 lg:col-span-5">
+          <div className="flex min-w-0 flex-col gap-6 lg:col-span-5">
             <div className="flex-1 rounded-[32px] border border-zinc-100 bg-white p-8 shadow-sm">
               <div className="mb-6 flex items-center gap-3">
                 <div className="rounded-lg border border-zinc-100 bg-zinc-50 p-2">

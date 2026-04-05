@@ -15,7 +15,7 @@ import { SectionTransition } from "@/components/ui/SectionTransition";
 
 export default function Home() {
   return (
-    <main className="relative min-h-screen">
+    <main className="relative min-h-screen w-full min-w-0 overflow-x-hidden">
       <Navbar />
       <Hero />
       <SectionTransition from="hero" to="green" variant="arc" waveIndex={0} />

@@ -81,9 +81,9 @@ function FAQItem({
         onClick={onClick}
         aria-expanded={isOpen}
         aria-controls={panelId}
-        className="flex w-full items-center justify-between p-6 text-left outline-none md:p-8"
+        className="flex w-full min-w-0 items-center justify-between gap-3 p-6 text-left outline-none md:p-8"
       >
-        <span className="text-lg font-bold text-zinc-100 md:text-xl">
+        <span className="min-w-0 flex-1 text-pretty text-lg font-bold text-zinc-100 md:text-xl">
           {question}
         </span>
         <motion.div
@@ -140,15 +140,15 @@ export function FAQ() {
   const baseId = useId();
 
   return (
-    <section className="bg-[#0b140b] px-6 py-8 text-white md:px-12">
-      <div className="mx-auto max-w-4xl">
+    <section className="overflow-x-hidden bg-[#0b140b] px-6 py-8 text-white md:px-12">
+      <div className="mx-auto max-w-4xl min-w-0">
         <div className="mb-8 text-center">
           <div className="mb-6 inline-block rounded-full border border-orange-400/20 bg-orange-400/10 px-4 py-1">
             <span className="text-[10px] font-bold tracking-[0.2em] text-orange-400 uppercase">
               Support Center
             </span>
           </div>
-          <h2 className="mb-6 text-5xl font-bold text-balance md:text-7xl">
+          <h2 className="mb-6 text-4xl font-bold text-balance sm:text-5xl md:text-6xl lg:text-7xl">
             Frequently Asked <br /> Questions
           </h2>
           <p className="mx-auto max-w-xl text-lg leading-relaxed text-pretty text-zinc-500">

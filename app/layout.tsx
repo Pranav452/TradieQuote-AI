@@ -34,7 +34,7 @@ export default function RootLayout({
       lang="en"
       className={`${geistSans.variable} ${geistMono.variable} ${playfairSerif.variable} h-full antialiased`}
     >
-      <body className="flex min-h-full flex-col">
+      <body className="flex min-h-full min-w-0 flex-col overflow-x-hidden">
         <ScrollContext>{children}</ScrollContext>
       </body>
     </html>

@@ -55,7 +55,7 @@ export function DraftQuoteTyping() {
 
   return (
     <div
-      className="min-h-[11rem] whitespace-pre-wrap rounded-xl border border-white/10 bg-black/40 p-4 font-mono text-[10px] leading-relaxed text-zinc-400 md:text-[11px]"
+      className="max-w-full min-h-[11rem] min-w-0 overflow-x-auto whitespace-pre-wrap rounded-xl border border-white/10 bg-black/40 p-4 font-mono text-[10px] leading-relaxed text-zinc-400 md:text-[11px]"
       aria-live="polite"
     >
       <span className="text-zinc-300">{text}</span>

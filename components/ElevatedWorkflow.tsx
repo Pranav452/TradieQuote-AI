@@ -40,8 +40,8 @@ const steps: {
 
 export function ElevatedWorkflow() {
   return (
-    <section className="bg-[#0b140b] px-6 py-8 text-white md:px-12">
-      <div className="mx-auto max-w-7xl">
+    <section className="overflow-x-hidden bg-[#0b140b] px-6 py-8 text-white md:px-12">
+      <div className="mx-auto max-w-7xl min-w-0">
         <div className="mb-10 flex flex-col justify-between gap-8 md:flex-row md:items-end">
           <div>
             <span className="mb-4 block text-[10px] font-bold uppercase tracking-[0.2em] text-orange-400">

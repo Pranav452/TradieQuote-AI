@@ -109,7 +109,7 @@ export function SectionTransition({
 
   return (
     <div
-      className={`relative z-10 -mt-px h-16 w-full overflow-visible md:h-24 ${className}`}
+      className={`relative z-10 -mt-px h-16 w-full max-w-full overflow-x-clip md:h-24 ${className}`}
       aria-hidden
     >
       <svg

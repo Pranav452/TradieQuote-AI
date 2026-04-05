@@ -16,8 +16,8 @@ const footerLinks = {
 
 export function Footer() {
   return (
-    <footer className="bg-[#0b140b] px-6 pt-8 pb-8 text-white md:px-12">
-      <div className="mx-auto max-w-7xl">
+    <footer className="overflow-x-hidden bg-[#0b140b] px-6 pt-8 pb-8 text-white md:px-12">
+      <div className="mx-auto max-w-7xl min-w-0">
         
 
         <div className="mb-8 grid grid-cols-1 gap-12 md:grid-cols-2 lg:grid-cols-4 lg:gap-24">
@@ -90,7 +90,7 @@ export function Footer() {
             <p className="mb-6 text-sm leading-relaxed text-pretty text-zinc-500">
               Join 2,500+ professionals receiving monthly industry insights.
             </p>
-            <div className="relative flex items-center">
+            <div className="relative flex min-w-0 items-center">
               <label htmlFor="footer-newsletter-email" className="sr-only">
                 Work email address
               </label>

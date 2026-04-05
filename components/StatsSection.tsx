@@ -1,11 +1,11 @@
 export function StatsSection() {
   return (
-    <section className="bg-white px-6 py-8 md:px-12">
-      <div className="mx-auto max-w-7xl">
+    <section className="overflow-x-hidden bg-white px-6 py-8 md:px-12">
+      <div className="mx-auto max-w-7xl min-w-0">
         <div className="grid grid-cols-1 gap-8 md:grid-cols-2">
-          <div className="group flex min-h-[450px] flex-col justify-between rounded-[48px] bg-zinc-50 p-12 transition-all hover:bg-white hover:shadow-2xl hover:shadow-zinc-200 md:p-16">
-            <div>
-              <div className="mb-12 text-8xl font-bold tracking-tighter text-zinc-400 tabular-nums transition-colors group-hover:text-zinc-900 md:text-9xl">
+          <div className="group flex min-h-[450px] min-w-0 flex-col justify-between rounded-[48px] bg-zinc-50 p-8 transition-all hover:bg-white hover:shadow-2xl hover:shadow-zinc-200 sm:p-12 md:p-16">
+            <div className="min-w-0">
+              <div className="mb-8 text-5xl font-bold tracking-tighter text-zinc-400 tabular-nums transition-colors group-hover:text-zinc-900 sm:mb-12 sm:text-7xl md:text-8xl lg:text-9xl">
                 $100M+
               </div>
               <h3 className="mb-4 text-3xl font-bold text-zinc-900">
@@ -24,9 +24,9 @@ export function StatsSection() {
             </div>
           </div>
 
-          <div className="group flex min-h-[450px] flex-col justify-between rounded-[48px] bg-[#0b140b] p-12 md:p-16">
-            <div>
-              <div className="mb-12 text-8xl font-bold tracking-tighter text-zinc-800 tabular-nums transition-colors group-hover:text-white md:text-9xl">
+          <div className="group flex min-h-[450px] min-w-0 flex-col justify-between rounded-[48px] bg-[#0b140b] p-8 sm:p-12 md:p-16">
+            <div className="min-w-0">
+              <div className="mb-8 text-5xl font-bold tracking-tighter text-zinc-800 tabular-nums transition-colors group-hover:text-white sm:mb-12 sm:text-7xl md:text-8xl lg:text-9xl">
                 90x
               </div>
               <h3 className="mb-4 text-3xl font-bold text-white">Velocity First</h3>

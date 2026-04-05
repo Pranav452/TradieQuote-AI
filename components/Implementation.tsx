@@ -17,7 +17,7 @@ export function Implementation() {
           <span className="mb-6 block text-[10px] font-bold uppercase tracking-[0.2em] text-orange-400">
             Integration
           </span>
-          <h2 className="mx-auto max-w-4xl text-5xl leading-[0.9] font-bold text-balance md:text-8xl">
+          <h2 className="mx-auto max-w-4xl text-3xl leading-[1.05] font-bold text-balance sm:text-4xl md:text-6xl lg:text-7xl xl:text-8xl">
             Seamless implementation.{" "}
             <span className="text-zinc-800">No dev team required.</span>
           </h2>
@@ -36,8 +36,8 @@ export function Implementation() {
               </span>
               <div className="w-12 shrink-0" aria-hidden />
             </div>
-            <div className="overflow-x-auto p-8 font-mono text-sm leading-relaxed">
-              <pre className="text-zinc-500">
+            <div className="overflow-x-auto p-4 font-mono text-[11px] leading-relaxed sm:p-8 sm:text-sm">
+              <pre className="min-w-0 whitespace-pre-wrap break-words text-zinc-500 sm:whitespace-pre">
                 <code>{codeSnippet}</code>
               </pre>
             </div>

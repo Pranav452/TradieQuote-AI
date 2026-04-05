@@ -2,7 +2,7 @@ import { Button } from "@/components/ui/Button";
 
 export function Hero() {
   return (
-    <section className="relative flex min-h-dvh w-full items-center overflow-hidden bg-zinc-900">
+    <section className="relative flex min-h-dvh w-full min-w-0 items-center overflow-hidden bg-zinc-900">
       {/* Background Image Container */}
       <div
         className="absolute inset-0 z-0 bg-cover bg-center bg-no-repeat"
@@ -18,8 +18,8 @@ export function Hero() {
         />
       </div>
 
-      <div className="relative z-10 container mx-auto mt-20 px-6 md:px-12">
-        <div className="max-w-3xl">
+      <div className="relative z-10 container mx-auto mt-20 min-w-0 max-w-full px-6 md:px-12">
+        <div className="max-w-3xl min-w-0">
           <div className="mb-8 inline-block rounded-full border border-white/30 px-4 py-1">
             <span className="text-[10px] font-semibold uppercase tracking-[0.2em] text-white">
               The New Standard
@@ -27,13 +27,13 @@ export function Hero() {
           </div>
 
           <h1 className="mb-8 leading-[0.9] text-white text-balance">
-            <span className="block font-serif text-7xl font-light italic md:text-9xl">
+            <span className="block font-serif text-5xl font-light italic sm:text-6xl md:text-8xl lg:text-9xl">
               SCAN.
             </span>
-            <span className="block font-serif text-7xl font-light italic md:text-9xl">
+            <span className="block font-serif text-5xl font-light italic sm:text-6xl md:text-8xl lg:text-9xl">
               QUOTE.
             </span>
-            <span className="block font-serif text-7xl font-light italic md:text-9xl">
+            <span className="block font-serif text-5xl font-light italic sm:text-6xl md:text-8xl lg:text-9xl">
               FIX.
             </span>
           </h1>

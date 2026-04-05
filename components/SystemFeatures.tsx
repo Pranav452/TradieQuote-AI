@@ -10,8 +10,8 @@ import { DraftQuoteTyping } from "@/components/DraftQuoteTyping";
 
 export function SystemFeatures() {
   return (
-    <section className="bg-[#0b140b] px-6 py-8 text-white md:px-12">
-      <div className="mx-auto max-w-7xl">
+    <section className="overflow-x-hidden bg-[#0b140b] px-6 py-8 text-white md:px-12">
+      <div className="mx-auto max-w-7xl min-w-0">
         <div className="mb-10 flex flex-col gap-6 lg:mb-12 lg:flex-row lg:items-end lg:justify-between">
           <div className="max-w-3xl">
             <span className="mb-3 inline-block text-[10px] font-bold tracking-[0.2em] text-orange-400 uppercase">
@@ -143,7 +143,7 @@ export function SystemFeatures() {
             </div>
           </div>
 
-          <div className="relative flex min-h-[320px] flex-col justify-between overflow-hidden rounded-[2.5rem] border border-white/10 bg-zinc-950/60 p-8 md:p-10 lg:col-span-6">
+          <div className="relative flex min-h-[320px] min-w-0 flex-col justify-between overflow-hidden rounded-[2.5rem] border border-white/10 bg-zinc-950/60 p-8 md:p-10 lg:col-span-6">
             <div>
               <div className="mb-6 flex size-11 items-center justify-center rounded-xl bg-orange-400/15 ring-1 ring-orange-400/25">
                 <Zap className="size-5 text-orange-400" aria-hidden />
@@ -155,7 +155,7 @@ export function SystemFeatures() {
                 Built for the field—reply before the next tradie opens their laptop.
               </p>
             </div>
-            <div className="relative mt-6 ml-auto h-[13.5rem] w-[11rem] rounded-t-[1.75rem] border-x-[7px] border-t-[7px] border-zinc-700 bg-zinc-950">
+            <div className="relative mx-auto mt-6 h-[13.5rem] w-[11rem] max-w-full rounded-t-[1.75rem] border-x-[7px] border-t-[7px] border-zinc-700 bg-zinc-950 sm:ml-auto sm:mr-0">
               <div
                 className="absolute top-3 left-1/2 h-1 w-10 -translate-x-1/2 rounded-full bg-zinc-700"
                 aria-hidden

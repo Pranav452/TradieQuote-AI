@@ -64,8 +64,8 @@ const features: { Icon: LucideIcon; title: string; description: string }[] = [
 
 export function HowItWorks() {
   return (
-    <section className="bg-white px-6 py-8 text-zinc-900 md:px-12">
-      <div className="mx-auto max-w-7xl">
+    <section className="overflow-x-hidden bg-white px-6 py-8 text-zinc-900 md:px-12">
+      <div className="mx-auto max-w-7xl min-w-0">
         <div className="mb-12 grid grid-cols-1 items-start gap-10 lg:mb-14 lg:grid-cols-12 lg:gap-12">
           <div className="lg:col-span-5">
             <div className="mb-4 inline-flex rounded-full border border-orange-200 bg-orange-50 px-4 py-1">
