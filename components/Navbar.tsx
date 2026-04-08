@@ -1,13 +1,16 @@
 "use client";
 
 import * as DropdownMenu from "@radix-ui/react-dropdown-menu";
+import Image from "next/image";
 import Link from "next/link";
 import { Button } from "@/components/ui/Button";
+import { useSmoothScroll } from "@/components/ScrollContext";
 
 const navLinks = [
-  { href: "#", label: "Product" },
-  { href: "#", label: "Features" },
-  { href: "#", label: "Pricing" },
+  { href: "#solution", label: "Solution" },
+  { href: "#how-it-works", label: "How It Works" },
+  { href: "#pricing", label: "Pricing" },
+  { href: "#integration", label: "Integration" },
 ];
 
 function MenuIcon() {
@@ -21,15 +24,54 @@ function MenuIcon() {
 }
 
 export function Navbar() {
+  const lenis = useSmoothScroll();
+
+  function handleNavClick(
+    event: React.MouseEvent<HTMLAnchorElement>,
+    href: string,
+  ) {
+    if (!href.startsWith("#")) {
+      return;
+    }
+
+    const targetId = href.slice(1);
+    const target = targetId ? document.getElementById(targetId) : document.body;
+    if (!target) {
+      return;
+    }
+
+    event.preventDefault();
+
+    if (lenis) {
+      lenis.scrollTo(target, { offset: -96 });
+    } else {
+      const rect = target.getBoundingClientRect();
+      const absoluteTop = window.scrollY + rect.top - 96;
+      window.scrollTo({ top: absoluteTop, behavior: "smooth" });
+    }
+  }
+
   return (
-    <nav className="absolute top-0 z-50 flex w-full min-w-0 max-w-full items-center justify-between gap-4 px-6 py-6 md:px-12">
-      <div className="min-w-0 truncate text-xl font-bold tracking-tight text-white">
-        TradieQuote AI
-      </div>
+    <nav className="fixed top-0 z-50 flex w-full min-w-0 max-w-full items-center justify-between gap-4 border-b border-white/10 bg-zinc-950/70 px-6 py-4 text-white backdrop-blur-md md:px-12">
+      <Link
+        href="#"
+        className="flex min-w-0 items-center gap-3 rounded-xl focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white"
+        aria-label="Go to top"
+      >
+        <Image src="/logo.png" alt="TradieQuote AI logo" width={36} height={36} className="rounded-full" />
+        <div className="min-w-0 truncate text-base font-bold tracking-tight sm:text-lg">
+          Tradie<span className="text-orange-400">Quote</span> AI
+        </div>
+      </Link>
 
       <div className="hidden items-center gap-8 text-sm font-medium text-white/90 md:flex">
         {navLinks.map(({ href, label }) => (
-          <Link key={label} href={href} className="transition hover:text-white">
+          <Link
+            key={label}
+            href={href}
+            onClick={(event) => handleNavClick(event, href)}
+            className="transition hover:text-white"
+          >
             {label}
           </Link>
         ))}
@@ -59,6 +101,7 @@ export function Navbar() {
                 <DropdownMenu.Item key={label} asChild>
                   <Link
                     href={href}
+                    onClick={(event) => handleNavClick(event, href)}
                     className="block cursor-pointer rounded-xl px-4 py-3 text-sm font-medium text-white/90 outline-none data-[highlighted]:bg-white/10 data-[highlighted]:text-white"
                   >
                     {label}

@@ -42,7 +42,10 @@ const comparison: {
 
 export function ROISection() {
   return (
-    <section className="overflow-x-hidden bg-[#0b140b] px-6 py-8 text-white md:px-12">
+    <section
+      id="roi"
+      className="scroll-mt-28 overflow-x-hidden bg-[#0b140b] px-6 py-8 text-white md:px-12"
+    >
       <div className="mx-auto max-w-7xl min-w-0">
         <div className="grid grid-cols-1 items-start gap-16 lg:grid-cols-2">
           <div className="min-w-0 space-y-8">
@@ -66,7 +69,7 @@ export function ROISection() {
                 Revenue Potential
               </span>
               <h3 className="mb-2 text-3xl font-bold">
-                Close 1 extra job per month = $250–$500+
+                Close 1 extra job per month = $250-$500+
               </h3>
               <p className="text-sm text-zinc-500 italic">
                 Pure profit reclaimed from efficient quoting.
@@ -112,10 +115,10 @@ export function ROISection() {
             <div className="flex flex-col items-start justify-between gap-6 rounded-[32px] border border-orange-400/20 bg-zinc-800/40 p-8 sm:flex-row sm:items-center">
               <div>
                 <span className="mb-1 block text-[10px] font-bold tracking-widest text-orange-400 uppercase">
-                  The Investment
+                  The takeaway
                 </span>
                 <h3 className="text-2xl font-bold text-zinc-100">
-                  TradieQuote AI — $89/month
+                  One extra job a month covers the cost.
                 </h3>
               </div>
               <CheckCircle2 className="size-8 shrink-0 text-orange-400" aria-hidden />

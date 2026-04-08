@@ -1,4 +1,5 @@
 import { Database, Terminal } from "lucide-react";
+import { Button } from "@/components/ui/Button";
 
 const codeSnippet = `01   <!-- Global TradieQuote Widget -->
 02   <script src="https://cdn.tradiequote.ai/v2/widget.js"
@@ -11,7 +12,10 @@ const codeSnippet = `01   <!-- Global TradieQuote Widget -->
 
 export function Implementation() {
   return (
-    <section className="overflow-x-hidden bg-[#0b140b] px-6 py-8 text-white md:px-12">
+    <section
+      id="integration"
+      className="scroll-mt-28 overflow-x-hidden bg-[#0b140b] px-6 py-8 text-white md:px-12"
+    >
       <div className="mx-auto max-w-7xl">
         <div className="mb-10 text-center">
           <span className="mb-6 block text-[10px] font-bold uppercase tracking-[0.2em] text-orange-400">
@@ -21,6 +25,11 @@ export function Implementation() {
             Seamless implementation.{" "}
             <span className="text-zinc-800">No dev team required.</span>
           </h2>
+          <div className="mt-8 flex justify-center">
+            <Button className="bg-orange-400 text-black hover:bg-orange-500">
+              Get Demo
+            </Button>
+          </div>
         </div>
 
         <div className="grid grid-cols-1 items-start gap-12 lg:grid-cols-12">

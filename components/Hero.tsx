@@ -1,4 +1,5 @@
 import { Button } from "@/components/ui/Button";
+import { HeroContactForm } from "@/components/HeroContactForm";
 
 export function Hero() {
   return (
@@ -19,37 +20,53 @@ export function Hero() {
       </div>
 
       <div className="relative z-10 container mx-auto mt-20 min-w-0 max-w-full px-6 md:px-12">
-        <div className="max-w-3xl min-w-0">
-          <div className="mb-8 inline-block rounded-full border border-white/30 px-4 py-1">
-            <span className="text-[10px] font-semibold uppercase tracking-[0.2em] text-white">
-              The New Standard
-            </span>
+        <div className="grid grid-cols-1 items-start gap-10 lg:grid-cols-12 lg:gap-12">
+          <div className="max-w-3xl min-w-0 lg:col-span-7">
+            <div className="mb-8 inline-block rounded-full border border-white/30 px-4 py-1">
+              <span className="text-[10px] font-semibold uppercase tracking-[0.2em] text-white">
+                The New Standard
+              </span>
+            </div>
+
+            <h1 className="mb-8 leading-[0.9] text-white text-balance">
+              <span className="block text-5xl font-bold italic sm:text-6xl md:text-8xl lg:text-9xl">
+                SCAN.
+              </span>
+              <span className="block text-5xl font-bold italic text-orange-400 sm:text-6xl md:text-8xl lg:text-9xl">
+                QUOTE.
+              </span>
+              <span className="block text-5xl font-bold italic sm:text-6xl md:text-8xl lg:text-9xl">
+                FIX.
+              </span>
+            </h1>
+
+            <h2 className="mb-4 max-w-xl text-2xl font-medium text-white text-balance md:text-3xl">
+              Create Accurate
+              <span className="text-orange-400"> Quotes</span>
+              <br />
+              in Minutes - Not Hours
+            </h2>
+
+            <p className="mb-10 max-w-lg text-lg leading-relaxed text-pretty text-white/70">
+              Let customers upload a photo, get an instant estimate, and book you
+              without calls, site visits, or delays.
+            </p>
+
+            <div className="flex flex-col gap-4 sm:flex-row">
+              <Button variant="primary">Get Demo</Button>
+              <Button variant="outline">See It In Action</Button>
+            </div>
           </div>
 
-          <h1 className="mb-8 leading-[0.9] text-white text-balance">
-            <span className="block font-serif text-5xl font-light italic sm:text-6xl md:text-8xl lg:text-9xl">
-              SCAN.
-            </span>
-            <span className="block font-serif text-5xl font-light italic sm:text-6xl md:text-8xl lg:text-9xl">
-              QUOTE.
-            </span>
-            <span className="block font-serif text-5xl font-light italic sm:text-6xl md:text-8xl lg:text-9xl">
-              FIX.
-            </span>
-          </h1>
-
-          <h2 className="mb-4 max-w-xl text-2xl font-medium text-white text-balance md:text-3xl">
-            Win More Jobs with AI-Powered Instant Quotes
-          </h2>
-
-          <p className="mb-10 max-w-lg text-lg leading-relaxed text-pretty text-white/70">
-            Let customers upload a photo, get an instant estimate, and book you
-            without calls, site visits, or delays.
-          </p>
-
-          <div className="flex flex-col gap-4 sm:flex-row">
-            <Button variant="primary">Get Demo</Button>
-            <Button variant="outline">See It In Action</Button>
+          <div className="w-full max-w-md rounded-3xl border border-white/15 bg-black/70 p-6 backdrop-blur-md lg:col-span-5 lg:mt-16">
+            <h3 className="text-lg font-semibold text-white text-balance">
+              Get a callback about TradieQuote
+            </h3>
+            <p className="mt-2 text-sm text-pretty text-white/70">
+              Tell us a bit about your trade business and we&apos;ll reach out with a
+              tailored walkthrough.
+            </p>
+            <HeroContactForm />
           </div>
         </div>
       </div>

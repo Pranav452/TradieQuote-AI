@@ -7,6 +7,7 @@ import {
   Zap,
 } from "lucide-react";
 import { DraftQuoteTyping } from "@/components/DraftQuoteTyping";
+import { Button } from "@/components/ui/Button";
 
 export function SystemFeatures() {
   return (
@@ -26,7 +27,7 @@ export function SystemFeatures() {
             </h2>
           </div>
           <p className="max-w-sm text-sm leading-relaxed text-pretty text-zinc-500 lg:text-base">
-            Not just quotes—a single surface for enquiries, documents, and field
+            Not just quotes, a single surface for enquiries, documents, and field
             follow-through.
           </p>
         </div>
@@ -42,7 +43,7 @@ export function SystemFeatures() {
               </h3>
               <p className="max-w-md text-sm leading-relaxed text-pretty text-zinc-500">
                 Problem notes, contact, site photos, and live estimate status in one
-                row—built for glancing from the van.
+                row, built for glancing from the van.
               </p>
             </div>
 
@@ -118,7 +119,7 @@ export function SystemFeatures() {
             </div>
             <h3 className="mb-3 text-2xl font-semibold tracking-tight">Dashboard</h3>
             <p className="mb-8 max-w-sm text-sm leading-relaxed text-pretty text-zinc-500">
-              Enquiries, active jobs, and closed work—at a glance, without digging
+              Enquiries, active jobs, and closed work, at a glance, without digging
               through threads.
             </p>
             <div className="space-y-3">
@@ -152,7 +153,7 @@ export function SystemFeatures() {
                 Speed &amp; mobility
               </h3>
               <p className="max-w-sm text-sm leading-relaxed text-pretty text-zinc-500">
-                Built for the field—reply before the next tradie opens their laptop.
+                Built for the field, reply before the next tradie opens their laptop.
               </p>
             </div>
             <div className="relative mx-auto mt-6 h-[13.5rem] w-[11rem] max-w-full rounded-t-[1.75rem] border-x-[7px] border-t-[7px] border-zinc-700 bg-zinc-950 sm:ml-auto sm:mr-0">
@@ -173,8 +174,11 @@ export function SystemFeatures() {
             Complete lifecycle
           </span>
           <p className="max-w-xl text-sm text-pretty text-zinc-500">
-            From first enquiry to final payment—one system, one place.
+            From first enquiry to final payment, one system, one place.
           </p>
+          <Button className="bg-orange-400 text-black hover:bg-orange-500">
+            Get Demo
+          </Button>
         </div>
       </div>
     </section>

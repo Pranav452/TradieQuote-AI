@@ -1,3 +1,5 @@
+import { Button } from "@/components/ui/Button";
+
 export function StatsSection() {
   return (
     <section className="overflow-x-hidden bg-white px-6 py-8 md:px-12">
@@ -42,6 +44,12 @@ export function StatsSection() {
               </span>
             </div>
           </div>
+        </div>
+
+        <div className="mt-10 flex justify-center">
+          <Button className="bg-zinc-900 text-white hover:bg-zinc-800">
+            Get Demo
+          </Button>
         </div>
       </div>
     </section>

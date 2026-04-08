@@ -5,7 +5,7 @@ import { useReducedMotion } from "framer-motion";
 
 const BODY = `QUOTE TQ-2841 · Draft
 ─────────────────────
-Emergency leak — bathroom
+Emergency leak - bathroom
 Parts & labor ........ $285.00
 Call-out fee .........  $45.00
 Total (incl. GST) .... $379.50

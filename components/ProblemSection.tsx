@@ -1,5 +1,6 @@
 import Image from "next/image";
 import { AlertCircle, XCircle, Zap } from "lucide-react";
+import { Button } from "@/components/ui/Button";
 
 const steps = [
   "You drive out",
@@ -21,7 +22,7 @@ export function ProblemSection() {
         <div className="grid grid-cols-1 items-start gap-16 lg:grid-cols-2">
           <div className="min-w-0 space-y-12">
             <div>
-              <h2 className="mb-8 font-serif text-4xl leading-[1.1] text-balance text-white italic sm:text-5xl md:text-6xl lg:text-7xl">
+              <h2 className="mb-8 font-bold text-4xl leading-[1.1] text-balance text-white italic sm:text-5xl md:text-6xl lg:text-7xl">
                 Still Wasting Hours <br />
                 Quoting Jobs That Go <br />
                 Nowhere?
@@ -79,8 +80,8 @@ export function ProblemSection() {
 
             <div className="relative overflow-hidden rounded-[40px] border border-white/10 bg-black/25 p-10 text-white shadow-2xl">
               <div className="relative z-10">
-                <h3 className="mb-2 font-serif text-3xl italic text-balance">
-                  That&apos;s 2–3 hours gone. No money made.
+                <h3 className="mb-2 font-bold text-3xl italic text-balance">
+                  That&apos;s 2-3 hours gone. No money made.
                 </h3>
                 <p className="text-sm text-pretty text-zinc-400">
                   If you take hours... someone else takes the job in minutes
@@ -110,6 +111,11 @@ export function ProblemSection() {
               <p className="text-sm text-zinc-500">
                 Most of your quoting time never turns into paid work
               </p>
+              <div className="mt-5">
+                <Button className="bg-orange-400 text-black hover:bg-orange-500">
+                  Get Demo
+                </Button>
+              </div>
             </div>
           </div>
 

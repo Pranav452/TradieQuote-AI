@@ -7,6 +7,7 @@ import {
   ShieldCheck,
   Zap,
 } from "lucide-react";
+import { Button } from "@/components/ui/Button";
 
 const steps = [
   {
@@ -64,7 +65,10 @@ const features: { Icon: LucideIcon; title: string; description: string }[] = [
 
 export function HowItWorks() {
   return (
-    <section className="overflow-x-hidden bg-white px-6 py-8 text-zinc-900 md:px-12">
+    <section
+      id="how-it-works"
+      className="scroll-mt-28 overflow-x-hidden bg-white px-6 py-8 text-zinc-900 md:px-12"
+    >
       <div className="mx-auto max-w-7xl min-w-0">
         <div className="mb-12 grid grid-cols-1 items-start gap-10 lg:mb-14 lg:grid-cols-12 lg:gap-12">
           <div className="lg:col-span-5">
@@ -73,16 +77,21 @@ export function HowItWorks() {
                 Workflow
               </span>
             </div>
-            <h2 className="font-serif text-4xl leading-[1.1] text-balance text-zinc-900 italic md:text-5xl lg:text-6xl">
+            <h2 className="font-bold text-4xl leading-[1.1] text-balance text-zinc-900 italic md:text-5xl lg:text-6xl">
               How it works
             </h2>
             <div className="mt-6 hidden h-px w-16 bg-zinc-900/15 lg:block" aria-hidden />
           </div>
           <div className="lg:col-span-7 lg:pt-2">
             <p className="text-lg leading-relaxed text-pretty text-zinc-600 md:text-xl">
-              TradieQuote turns your old quoting grind into a single, smooth flow—from
-              first photo to booked job—without extra admin.
+              TradieQuote turns your old quoting grind into a single, smooth flow, from
+              first photo to booked job, without extra admin.
             </p>
+            <div className="mt-6">
+              <Button className="bg-zinc-900 text-white hover:bg-zinc-800">
+                Get Demo
+              </Button>
+            </div>
           </div>
         </div>
 
@@ -106,7 +115,7 @@ export function HowItWorks() {
         </div>
 
         <div className="mb-10 text-center lg:mb-12">
-          <h2 className="font-serif text-4xl text-balance text-zinc-900 italic md:text-5xl lg:text-6xl">
+          <h2 className="font-bold text-4xl text-balance text-zinc-900 italic md:text-5xl lg:text-6xl">
             Built to help you win more jobs
           </h2>
         </div>
@@ -153,7 +162,7 @@ export function HowItWorks() {
               aria-hidden
             />
             <span className="text-sm font-medium text-pretty text-zinc-600">
-              Be the first to quote — every time.
+              Be the first to quote every time.
             </span>
           </div>
         </div>

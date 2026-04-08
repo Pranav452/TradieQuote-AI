@@ -1,16 +1,23 @@
 import Image from "next/image";
 import { Code2, Layout, Smartphone } from "lucide-react";
 import { SectionHeader } from "@/components/ui/SectionHeader";
+import { Button } from "@/components/ui/Button";
 
 export function FeaturesGrid() {
   return (
-    <section className="overflow-x-hidden bg-white px-6 py-8 md:px-12">
+    <section
+      id="solution"
+      className="scroll-mt-28 overflow-x-hidden bg-white px-6 py-8 md:px-12"
+    >
       <div className="mx-auto max-w-7xl min-w-0">
         <SectionHeader
           badge="Seamless Ecosystem"
           title="Works On Any Website"
           description="TradieQuote AI is built to fit into your workflow, not complicate it. Integrate with a single snippet or your favorite CMS."
         />
+        <div className="-mt-2 mb-10 flex justify-center">
+          <Button className="bg-zinc-900 text-white hover:bg-zinc-800">Get Demo</Button>
+        </div>
 
         <div className="grid grid-cols-1 gap-6 lg:grid-cols-12">
           <div className="flex min-h-[500px] min-w-0 flex-col justify-between rounded-[40px] border border-zinc-100 bg-zinc-50/50 p-6 sm:p-8 md:p-12 lg:col-span-7">
@@ -76,7 +83,7 @@ export function FeaturesGrid() {
                 Native CMS Support
               </h4>
               <p className="mb-6 text-sm text-zinc-500">
-                Optimized plugins for WordPress, Webflow, and Shopify sites.
+                Optimised plugins for WordPress, Webflow, and Shopify sites.
               </p>
               <div className="flex flex-wrap gap-2">
                 <span className="rounded-lg border border-zinc-200 bg-zinc-50 px-3 py-2 text-xs font-semibold text-zinc-700">

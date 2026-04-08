@@ -40,8 +40,9 @@ export function ProcessSection() {
     <section className="overflow-x-hidden bg-[#0b140b] px-6 py-8 text-white md:px-12">
       <div className="mx-auto max-w-7xl">
         <div className="mb-24 text-center">
-          <h2 className="mx-auto mb-6 max-w-4xl font-serif text-5xl leading-tight text-balance italic md:text-7xl">
-            Let Your Website Do The{" "}
+          <h2 className="mx-auto mb-6 max-w-4xl font-bold text-5xl leading-tight text-balance italic md:text-7xl">
+            Let Your 
+            <span className="text-orange-400"> Website</span> Do The{" "}
             <br className="hidden md:block" />
             Quoting For You
           </h2>
@@ -107,7 +108,7 @@ export function ProcessSection() {
                   Quote Generated
                 </span>
                 <div className="mb-6 text-3xl font-bold text-zinc-900">
-                  $250 – $300
+                  $250 - $300
                 </div>
                 <button
                   type="button"

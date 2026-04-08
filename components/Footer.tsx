@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import { Globe, Share2 } from "lucide-react";
 
 const footerLinks = {
@@ -22,8 +23,17 @@ export function Footer() {
 
         <div className="mb-8 grid grid-cols-1 gap-12 md:grid-cols-2 lg:grid-cols-4 lg:gap-24">
           <div className="space-y-8">
-            <div className="text-2xl font-bold tracking-tight">
-              TradieQuote<span className="text-orange-400">AI</span>
+            <div className="flex items-center gap-1 rounder">
+              <Image
+                src="/logo.png"
+                alt="TradieQuote AI logo"
+                width={40}
+                height={40}
+                className="rounded-full"
+              />
+              <div className="text-2xl font-bold tracking-tight">
+                TradieQuote<span className="text-orange-400"> AI</span>
+              </div>
             </div>
             <p className="max-w-[240px] text-sm leading-relaxed text-pretty text-zinc-500">
               Redefining the standard of commerce for trades and services worldwide.

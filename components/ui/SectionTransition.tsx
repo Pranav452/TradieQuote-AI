@@ -4,7 +4,7 @@ import { useId } from "react";
 
 /**
  * Section seams: default organic waves (`variant="wave"`), or a single shallow
- * arc with white + emerald glow (`variant="arc"`) — intended for hero → next.
+ * arc with white + emerald glow (`variant="arc"`) - intended for hero → next.
  */
 
 type SectionTone = "hero" | "green" | "white";

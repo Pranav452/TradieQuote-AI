@@ -1,4 +1,3 @@
-import { ElevatedWorkflow } from "@/components/ElevatedWorkflow";
 import { FAQ } from "@/components/FAQ";
 import { FeaturesGrid } from "@/components/FeaturesGrid";
 import { Footer } from "@/components/Footer";
@@ -6,6 +5,7 @@ import { Hero } from "@/components/Hero";
 import { HowItWorks } from "@/components/HowItWorks";
 import { Implementation } from "@/components/Implementation";
 import { Navbar } from "@/components/Navbar";
+import { PricingSection } from "@/components/PricingSection";
 import { ProblemSection } from "@/components/ProblemSection";
 import { ProcessSection } from "@/components/ProcessSection";
 import { ROISection } from "@/components/ROISection";
@@ -28,17 +28,17 @@ export default function Home() {
       <HowItWorks />
       <SectionTransition from="white" to="green" waveIndex={4} />
       <SystemFeatures />
-      <SectionTransition from="green" to="green" waveIndex={5} />
-      <ElevatedWorkflow />
       <SectionTransition from="green" to="green" waveIndex={6} />
       <Implementation />
       <SectionTransition from="green" to="white" waveIndex={7} />
       <StatsSection />
-      <SectionTransition from="white" to="green" waveIndex={8} />
+      <div className="h-px w-full bg-zinc-200/80" aria-hidden />
+      <PricingSection />
+      <SectionTransition from="white" to="green" waveIndex={9} />
       <ROISection />
-      <SectionTransition from="green" to="green" waveIndex={9} />
-      <FAQ />
       <SectionTransition from="green" to="green" waveIndex={10} />
+      <FAQ />
+      <SectionTransition from="green" to="green" waveIndex={11} />
       <Footer />
     </main>
   );

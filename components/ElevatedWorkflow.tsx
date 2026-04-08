@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { Button } from "@/components/ui/Button";
 
 const steps: {
   number: string;
@@ -47,7 +48,7 @@ export function ElevatedWorkflow() {
             <span className="mb-4 block text-[10px] font-bold uppercase tracking-[0.2em] text-orange-400">
               Process
             </span>
-            <h2 className="font-serif text-5xl leading-tight text-balance italic md:text-7xl">
+            <h2 className="font-bold text-5xl leading-tight text-balance italic md:text-7xl">
               Elevated Workflow
             </h2>
           </div>
@@ -92,6 +93,12 @@ export function ElevatedWorkflow() {
             </div>
             ),
           )}
+        </div>
+
+        <div className="mt-12 flex justify-center">
+          <Button className="bg-orange-400 text-black hover:bg-orange-500">
+            Get Demo
+          </Button>
         </div>
       </div>
     </section>
