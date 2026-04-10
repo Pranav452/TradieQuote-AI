@@ -2,7 +2,7 @@
 
 import { useId, useState } from "react";
 import { AnimatePresence, motion, useReducedMotion } from "framer-motion";
-import { ChevronDown, Mail, MessageCircle } from "lucide-react";
+import { ChevronDown, Mail } from "lucide-react";
 
 const faqData = [
   {
@@ -182,20 +182,15 @@ export function FAQ() {
           </p>
 
           <div className="flex flex-col items-center justify-center gap-6 sm:flex-row">
-            <button
-              type="button"
+            <a
+              href="mailto:support@tradiesquoteai.com.au"
+              target="_blank"
+              rel="noopener noreferrer"
               className="flex w-full items-center justify-center gap-3 rounded-2xl bg-orange-400 px-10 py-4 font-bold text-black transition-colors hover:bg-orange-500 sm:w-auto"
             >
               <Mail className="size-5 shrink-0" aria-hidden />
               Contact Support
-            </button>
-            <button
-              type="button"
-              className="flex items-center gap-2 font-bold text-orange-400 transition-colors hover:text-orange-300"
-            >
-              <MessageCircle className="size-5 shrink-0" aria-hidden />
-              Live Chat
-            </button>
+            </a>
           </div>
         </div>
       </div>

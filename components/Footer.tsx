@@ -14,7 +14,11 @@ const footerLinks = {
   company: [
     { label: "Our Story", href: "#", scrollTop: true },
     { label: "Media Kit", href: "#" },
-    { label: "Contact", href: "#footer-contact" },
+    {
+      label: "Contact Support",
+      href: "mailto:support@tradiesquoteai.com.au",
+      external: true,
+    },
   ] as const,
 };
 
@@ -174,19 +178,28 @@ export function Footer() {
             <ul className="space-y-4">
               {footerLinks.company.map((link) => (
                 <li key={link.label}>
-                  <Link
-                    href={link.href}
-                    onClick={(e) =>
-                      handleInPageNav(
-                        e,
-                        link.href,
-                        "scrollTop" in link ? link.scrollTop : false,
-                      )
-                    }
-                    className="font-medium text-zinc-400 transition-colors duration-200 hover:text-white"
-                  >
-                    {link.label}
-                  </Link>
+                  {"external" in link && link.external ? (
+                    <a
+                      href={link.href}
+                      className="font-medium text-zinc-400 transition-colors duration-200 hover:text-white"
+                    >
+                      {link.label}
+                    </a>
+                  ) : (
+                    <Link
+                      href={link.href}
+                      onClick={(e) =>
+                        handleInPageNav(
+                          e,
+                          link.href,
+                          "scrollTop" in link ? link.scrollTop : false,
+                        )
+                      }
+                      className="font-medium text-zinc-400 transition-colors duration-200 hover:text-white"
+                    >
+                      {link.label}
+                    </Link>
+                  )}
                 </li>
               ))}
             </ul>
