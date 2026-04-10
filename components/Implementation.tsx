@@ -1,5 +1,6 @@
 import { Database, Terminal } from "lucide-react";
 import { Button } from "@/components/ui/Button";
+import { ZCAL_DEMO_URL } from "@/lib/site";
 
 const codeSnippet = `01   <!-- Global TradieQuote Widget -->
 02   <script src="https://cdn.tradiequote.ai/v2/widget.js"
@@ -26,7 +27,7 @@ export function Implementation() {
             <span className="text-zinc-800">No dev team required.</span>
           </h2>
           <div className="mt-8 flex justify-center">
-            <Button className="bg-orange-400 text-black hover:bg-orange-500">
+            <Button href={ZCAL_DEMO_URL} className="bg-orange-400 text-black hover:bg-orange-500">
               Get Demo
             </Button>
           </div>

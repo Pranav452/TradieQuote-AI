@@ -5,6 +5,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { Button } from "@/components/ui/Button";
 import { useSmoothScroll } from "@/components/ScrollContext";
+import { ZCAL_DEMO_URL } from "@/lib/site";
 
 const navLinks = [
   { href: "#solution", label: "Solution" },
@@ -25,6 +26,15 @@ function MenuIcon() {
 
 export function Navbar() {
   const lenis = useSmoothScroll();
+
+  function scrollToTop(event: React.MouseEvent<HTMLAnchorElement>) {
+    event.preventDefault();
+    if (lenis) {
+      lenis.scrollTo(0, {});
+    } else {
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    }
+  }
 
   function handleNavClick(
     event: React.MouseEvent<HTMLAnchorElement>,
@@ -55,6 +65,7 @@ export function Navbar() {
     <nav className="fixed top-0 z-50 flex w-full min-w-0 max-w-full items-center justify-between gap-4 border-b border-white/10 bg-zinc-950/70 px-6 py-4 text-white backdrop-blur-md md:px-12">
       <Link
         href="#"
+        onClick={scrollToTop}
         className="flex min-w-0 items-center gap-3 rounded-xl focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white"
         aria-label="Go to top"
       >
@@ -78,7 +89,12 @@ export function Navbar() {
       </div>
 
       <div className="flex shrink-0 items-center gap-3">
-        <Button className="hidden !px-6 !py-2 text-sm md:inline-flex">Get Demo</Button>
+        <Button
+          href={ZCAL_DEMO_URL}
+          className="hidden !px-6 !py-2 text-sm md:inline-flex"
+        >
+          Get Demo
+        </Button>
 
         <DropdownMenu.Root>
           <DropdownMenu.Trigger asChild>
@@ -110,7 +126,12 @@ export function Navbar() {
               ))}
               <DropdownMenu.Separator className="my-1 h-px bg-white/10" />
               <DropdownMenu.Item asChild>
-                <Button className="!mt-0.5 w-full !px-4 !py-3 text-sm">Get Demo</Button>
+                <Button
+                  href={ZCAL_DEMO_URL}
+                  className="!mt-0.5 w-full !px-4 !py-3 text-sm"
+                >
+                  Get Demo
+                </Button>
               </DropdownMenu.Item>
             </DropdownMenu.Content>
           </DropdownMenu.Portal>

@@ -8,6 +8,7 @@ import {
 } from "lucide-react";
 import { DraftQuoteTyping } from "@/components/DraftQuoteTyping";
 import { Button } from "@/components/ui/Button";
+import { ZCAL_DEMO_URL } from "@/lib/site";
 
 export function SystemFeatures() {
   return (
@@ -176,7 +177,7 @@ export function SystemFeatures() {
           <p className="max-w-xl text-sm text-pretty text-zinc-500">
             From first enquiry to final payment, one system, one place.
           </p>
-          <Button className="bg-orange-400 text-black hover:bg-orange-500">
+          <Button href={ZCAL_DEMO_URL} className="bg-orange-400 text-black hover:bg-orange-500">
             Get Demo
           </Button>
         </div>

@@ -1,4 +1,5 @@
 import { Button } from "@/components/ui/Button";
+import { ZCAL_DEMO_URL } from "@/lib/site";
 
 export function StatsSection() {
   return (
@@ -7,15 +8,16 @@ export function StatsSection() {
         <div className="grid grid-cols-1 gap-8 md:grid-cols-2">
           <div className="group flex min-h-[450px] min-w-0 flex-col justify-between rounded-[48px] bg-zinc-50 p-8 transition-all hover:bg-white hover:shadow-2xl hover:shadow-zinc-200 sm:p-12 md:p-16">
             <div className="min-w-0">
-              <div className="mb-8 text-5xl font-bold tracking-tighter text-zinc-400 tabular-nums transition-colors group-hover:text-zinc-900 sm:mb-12 sm:text-7xl md:text-8xl lg:text-9xl">
-                $100M+
+              <div className="mb-8 text-5xl font-bold tracking-tighter text-zinc-400 transition-colors group-hover:text-zinc-900 sm:mb-12 sm:text-7xl md:text-8xl lg:text-9xl">
+                <span className="block text-balance leading-[0.95]">1 +</span>
+                <span className="block text-balance leading-[0.95]">million</span>
               </div>
               <h3 className="mb-4 text-3xl font-bold text-zinc-900">
                 Unrivaled Precision
               </h3>
               <p className="max-w-sm leading-relaxed text-pretty text-zinc-500">
-                Powering over $100M in monthly quotes with a 98.4% variance accuracy
-                against manual estimations.
+                Powering over 1 million quotes with a 98.4% variance accuracy against
+                manual estimations.
               </p>
             </div>
             <div className="mt-12 flex items-center gap-4">
@@ -47,7 +49,10 @@ export function StatsSection() {
         </div>
 
         <div className="mt-10 flex justify-center">
-          <Button className="bg-zinc-900 text-white hover:bg-zinc-800">
+          <Button
+            href={ZCAL_DEMO_URL}
+            className="bg-zinc-900 text-white hover:bg-zinc-800"
+          >
             Get Demo
           </Button>
         </div>

@@ -1,6 +1,7 @@
 import Image from "next/image";
 import { AlertCircle, XCircle, Zap } from "lucide-react";
 import { Button } from "@/components/ui/Button";
+import { ZCAL_DEMO_URL } from "@/lib/site";
 
 const steps = [
   "You drive out",
@@ -112,7 +113,7 @@ export function ProblemSection() {
                 Most of your quoting time never turns into paid work
               </p>
               <div className="mt-5">
-                <Button className="bg-orange-400 text-black hover:bg-orange-500">
+                <Button href={ZCAL_DEMO_URL} className="bg-orange-400 text-black hover:bg-orange-500">
                   Get Demo
                 </Button>
               </div>

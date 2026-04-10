@@ -1,5 +1,6 @@
 import Image from "next/image";
 import { Button } from "@/components/ui/Button";
+import { ZCAL_DEMO_URL } from "@/lib/site";
 
 const steps: {
   number: string;
@@ -96,7 +97,7 @@ export function ElevatedWorkflow() {
         </div>
 
         <div className="mt-12 flex justify-center">
-          <Button className="bg-orange-400 text-black hover:bg-orange-500">
+          <Button href={ZCAL_DEMO_URL} className="bg-orange-400 text-black hover:bg-orange-500">
             Get Demo
           </Button>
         </div>

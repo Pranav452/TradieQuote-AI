@@ -1,5 +1,6 @@
 import { CheckCircle2, XCircle } from "lucide-react";
 import { Button } from "@/components/ui/Button";
+import { ZCAL_DEMO_URL } from "@/lib/site";
 
 const freeFeatures = [
   "Up to 20 quotes / month",
@@ -119,7 +120,10 @@ export function PricingSection() {
             </div>
 
             <div className="mt-10">
-              <Button className="w-full bg-orange-400 text-black hover:bg-orange-500">
+              <Button
+                href={ZCAL_DEMO_URL}
+                className="w-full bg-orange-400 text-black hover:bg-orange-500"
+              >
                 Get Demo
               </Button>
               <p className="mt-3 text-center text-xs text-pretty text-zinc-500">

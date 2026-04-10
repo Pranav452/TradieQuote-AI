@@ -1,5 +1,5 @@
-import { Button } from "@/components/ui/Button";
 import { HeroContactForm } from "@/components/HeroContactForm";
+import { HeroCtas } from "@/components/HeroCtas";
 
 export function Hero() {
   return (
@@ -52,10 +52,7 @@ export function Hero() {
               without calls, site visits, or delays.
             </p>
 
-            <div className="flex flex-col gap-4 sm:flex-row">
-              <Button variant="primary">Get Demo</Button>
-              <Button variant="outline">See It In Action</Button>
-            </div>
+            <HeroCtas />
           </div>
 
           <div className="w-full max-w-md rounded-3xl border border-white/15 bg-black/70 p-6 backdrop-blur-md lg:col-span-5 lg:mt-16">

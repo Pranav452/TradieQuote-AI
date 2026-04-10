@@ -8,6 +8,7 @@ import {
   Zap,
 } from "lucide-react";
 import { Button } from "@/components/ui/Button";
+import { ZCAL_DEMO_URL } from "@/lib/site";
 
 const steps = [
   {
@@ -88,7 +89,7 @@ export function HowItWorks() {
               first photo to booked job, without extra admin.
             </p>
             <div className="mt-6">
-              <Button className="bg-zinc-900 text-white hover:bg-zinc-800">
+              <Button href={ZCAL_DEMO_URL} className="bg-zinc-900 text-white hover:bg-zinc-800">
                 Get Demo
               </Button>
             </div>

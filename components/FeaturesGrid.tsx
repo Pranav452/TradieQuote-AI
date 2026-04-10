@@ -2,6 +2,7 @@ import Image from "next/image";
 import { Code2, Layout, Smartphone } from "lucide-react";
 import { SectionHeader } from "@/components/ui/SectionHeader";
 import { Button } from "@/components/ui/Button";
+import { ZCAL_DEMO_URL } from "@/lib/site";
 
 export function FeaturesGrid() {
   return (
@@ -16,7 +17,9 @@ export function FeaturesGrid() {
           description="TradieQuote AI is built to fit into your workflow, not complicate it. Integrate with a single snippet or your favorite CMS."
         />
         <div className="-mt-2 mb-10 flex justify-center">
-          <Button className="bg-zinc-900 text-white hover:bg-zinc-800">Get Demo</Button>
+          <Button href={ZCAL_DEMO_URL} className="bg-zinc-900 text-white hover:bg-zinc-800">
+            Get Demo
+          </Button>
         </div>
 
         <div className="grid grid-cols-1 gap-6 lg:grid-cols-12">

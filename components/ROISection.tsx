@@ -1,4 +1,5 @@
 import type { LucideIcon } from "lucide-react";
+import { ZCAL_DEMO_URL } from "@/lib/site";
 import {
   AlertTriangle,
   CheckCircle2,
@@ -197,12 +198,14 @@ export function ROISection() {
                 <p className="mx-auto mb-10 max-w-sm text-pretty text-zinc-500">
                   Put an architect&apos;s precision into your business workflow today.
                 </p>
-                <button
-                  type="button"
-                  className="mb-6 rounded-full bg-orange-400 px-10 py-5 font-bold text-black shadow-xl shadow-orange-400/20 transition-colors hover:bg-orange-500"
+                <a
+                  href={ZCAL_DEMO_URL}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="mb-6 inline-flex rounded-full bg-orange-400 px-10 py-5 font-bold text-black shadow-xl shadow-orange-400/20 transition-colors hover:bg-orange-500"
                 >
                   Start Getting Better Jobs
-                </button>
+                </a>
                 <p className="text-[10px] font-bold tracking-widest text-zinc-400 uppercase">
                   No long-term contracts. Cancel anytime.
                 </p>
