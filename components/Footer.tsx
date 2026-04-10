@@ -1,6 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
-import { Globe, Share2 } from "lucide-react";
+import { Globe, Mail, MapPin, Phone, Share2 } from "lucide-react";
 
 const footerLinks = {
   platform: [
@@ -23,7 +23,7 @@ export function Footer() {
 
         <div className="mb-8 grid grid-cols-1 gap-12 md:grid-cols-2 lg:grid-cols-4 lg:gap-24">
           <div className="space-y-8">
-            <div className="flex items-center gap-1 rounder">
+            <div className="flex items-center gap-3">
               <Image
                 src="/logo.png"
                 alt="TradieQuote AI logo"
@@ -95,29 +95,29 @@ export function Footer() {
 
           <div>
             <h4 className="mb-8 text-[10px] font-bold tracking-[0.2em] text-zinc-600 uppercase">
-              Newsletter
+              Contact
             </h4>
-            <p className="mb-6 text-sm leading-relaxed text-pretty text-zinc-500">
-              Join 2,500+ professionals receiving monthly industry insights.
-            </p>
-            <div className="relative flex min-w-0 items-center">
-              <label htmlFor="footer-newsletter-email" className="sr-only">
-                Work email address
-              </label>
-              <input
-                id="footer-newsletter-email"
-                type="email"
-                name="email"
-                autoComplete="email"
-                placeholder="Work email address"
-                className="w-full rounded-xl border border-white/10 bg-white/5 py-4 pr-24 pl-5 text-sm transition-colors focus:border-orange-400/50 focus:outline-none md:pr-28"
-              />
-              <button
-                type="button"
-                className="absolute right-2 rounded-lg bg-orange-400 px-4 py-2 text-[10px] font-bold tracking-widest text-black uppercase transition-colors duration-200 hover:bg-orange-500"
+            <div className="space-y-4">
+              <a
+                href="tel:+61480044606"
+                className="flex items-start gap-3 text-sm text-zinc-400 transition-colors hover:text-white"
               >
-                Join
-              </button>
+                <Phone className="mt-0.5 size-4 shrink-0 text-orange-400/80" aria-hidden />
+                <span className="tabular-nums">+61 480 044 606</span>
+              </a>
+              <p className="flex items-start gap-3 text-sm leading-relaxed text-pretty text-zinc-500">
+                <MapPin className="mt-0.5 size-4 shrink-0 text-orange-400/80" aria-hidden />
+                <span>
+                  Level 1, 9/13 Bronte Rd, Bondi Junction NSW 2022, Australia
+                </span>
+              </p>
+              <a
+                href="mailto:support@tradiesquoteai.com.au"
+                className="flex min-w-0 items-start gap-3 break-all text-sm text-orange-400/90 transition-colors hover:text-orange-400"
+              >
+                <Mail className="mt-0.5 size-4 shrink-0 text-orange-400/80" aria-hidden />
+                <span>support@tradiesquoteai.com.au</span>
+              </a>
             </div>
           </div>
         </div>
