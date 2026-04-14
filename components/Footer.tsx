@@ -25,6 +25,10 @@ const footerLinks = {
 const FACEBOOK_URL =
   "https://www.facebook.com/profile.php?id=61578628195867";
 const INSTAGRAM_URL = "https://www.instagram.com/tradiesquoteai/";
+const SUPPORT_PHONE_DISPLAY = "+61 480 044 606";
+const SUPPORT_PHONE_TEL = "+61480044606";
+const SUPPORT_WHATSAPP_URL =
+  "https://wa.me/61480044606?text=Hi%20TradieQuote%20AI%2C%20I%20need%20support.";
 
 function FacebookIcon({ className }: { className?: string }) {
   return (
@@ -54,6 +58,10 @@ function InstagramIcon({ className }: { className?: string }) {
 
 export function Footer() {
   const lenis = useSmoothScroll();
+  const isMobileDevice = () =>
+    /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(
+      navigator.userAgent,
+    );
 
   function scrollToTop() {
     if (lenis) {
@@ -99,6 +107,15 @@ export function Footer() {
         behavior: "smooth",
       });
     }
+  }
+
+  function handlePhoneClick(event: React.MouseEvent<HTMLAnchorElement>) {
+    if (isMobileDevice()) {
+      return;
+    }
+
+    event.preventDefault();
+    window.open(SUPPORT_WHATSAPP_URL, "_blank", "noopener,noreferrer");
   }
 
   return (
@@ -211,11 +228,12 @@ export function Footer() {
             </h4>
             <div className="space-y-4">
               <a
-                href="tel:+61480044606"
+                href={`tel:${SUPPORT_PHONE_TEL}`}
+                onClick={handlePhoneClick}
                 className="flex items-start gap-3 text-sm text-zinc-400 transition-colors hover:text-white"
               >
                 <Phone className="mt-0.5 size-4 shrink-0 text-orange-400/80" aria-hidden />
-                <span className="tabular-nums">+61 480 044 606</span>
+                <span className="tabular-nums">{SUPPORT_PHONE_DISPLAY}</span>
               </a>
               <p className="flex items-start gap-3 text-sm leading-relaxed text-pretty text-zinc-500">
                 <MapPin className="mt-0.5 size-4 shrink-0 text-orange-400/80" aria-hidden />
